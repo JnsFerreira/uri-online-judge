@@ -1,0 +1,48 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+	int value, resto,cem,cinq,vinte,dez,cinco,dois,um;
+	
+	scanf("%d",&value);
+	
+	//Notas de R$100
+	cem = value/100;
+	resto=value%100;
+	
+	//Notas de R$50	
+	cinq= resto/50;
+	resto= resto%50;
+	
+	//Notas de R$20
+	vinte=resto/20;
+	resto=resto%20;
+	
+	//Notas de R$10
+	dez=resto/10;
+	resto=resto%10;
+	
+	//Notas de R$5
+	cinco=resto/5;
+	resto=resto%5;
+	
+	//Notas de R$2
+	dois=resto/2;
+	resto=resto%2;
+	
+	//Notas de R$1
+	um=resto/1;
+	
+	
+	//Resultados
+	printf("%d\n", value);
+	printf("%d nota(s) de R$ 100,00\n",cem);
+	printf("%d nota(s) de R$ 50,00\n",cinq);
+	printf("%d nota(s) de R$ 20,00\n",vinte);
+	printf("%d nota(s) de R$ 10,00\n",dez);
+	printf("%d nota(s) de R$ 5,00\n",cinco);
+	printf("%d nota(s) de R$ 2,00\n",dois);
+	printf("%d nota(s) de R$ 1,00\n",um);
+			
+    return 0;
+}
