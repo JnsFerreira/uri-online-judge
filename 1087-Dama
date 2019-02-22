@@ -48,7 +48,7 @@ int main() {
 	
 	for(cont=0;cont<i;cont++) //Exibe os resultados
 	{
-		printf("%d\n",result[cont]);	
+		printf("%d\n",result[cont]);	 
 	}
 
     return 0;
