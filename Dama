@@ -1,0 +1,55 @@
+#include <stdio.h>
+ 
+int main() {
+ //Variáveis.
+	int position,x1,y1,x2,y2, i=0, cont;
+	int result[1000000];
+	
+	//Laço de repetição para input de dados.
+	do{
+		//Coleta os dados de posição X1, Y1, X2, Y2.
+		scanf("%d%d%d%d",&x1,&y1,&x2,&y2);
+		
+		//Somente realiza a verificação caso os valores sejam diferentes de 0.
+		if (x1!=0 & y1!=0 & x2!=0 & y2!=0)
+		{
+			if ((abs(x2-x1))==0 & (abs(y2-y1))==0) //Condição de 0 movimentos
+			{
+				result[i]=0;
+				i++;
+			}
+			
+			else if((abs(x2-x1))==(abs(y2-y1))) //Condição para 1 movimento.
+			{
+				result[i]=1;
+				i++;
+			}
+			
+			else if(abs(x2-x1)>0 & abs(y2-y1)==0)
+			{
+				result[i]=1;
+				i++;
+			}
+			
+			else if(abs(x2-x1)==0 & abs(y2-y1)>0)
+			{
+				result[i]=1;
+				i++;
+			}
+			
+				else //Condição para 2 movimentos.
+				{
+					result[i]=2;
+					i++;
+				}
+		}
+	
+	}while(x1!=0 & y1!=0 & x2!=0 & y2!=0); //Finaliza o laço caso as cordenadas sejam igual a 0.
+	
+	for(cont=0;cont<i;cont++) //Exibe os resultados
+	{
+		printf("%d\n",result[cont]);	
+	}
+
+    return 0;
+}
