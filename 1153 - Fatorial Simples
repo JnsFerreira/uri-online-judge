@@ -1,0 +1,23 @@
+#include <stdio.h>
+ 
+int main() {
+  //Variáveis
+	int n,fatorial;
+	
+  //Coleta o dado de entrada
+	scanf("%d",&n);
+	
+	fatorial=n;
+		
+	do{
+		
+		fatorial=fatorial*(n-1); //Calculo do Fatorial
+		n--;
+	
+	}while(n>1); //Loop para calculo do fatorial
+  
+	//Exibe os resultados
+	printf("%d\n", fatorial);
+	
+    return 0;
+}
