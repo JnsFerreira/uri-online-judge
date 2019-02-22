@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+	char frase[15], verificaZero[]="0";
+	long long int fatorial;
+	int quantLetras;
+	const i=1;
+	
+	while(i==1)
+	{
+		scanf("%s", frase);	
+		if(strcmp(frase,verificaZero)== 0)
+		{
+			break;	
+		}
+		else{
+		quantLetras = strlen(frase);
+		for(fatorial=1;quantLetras>1;quantLetras--)
+			{
+				fatorial=fatorial*quantLetras;
+			}	
+			printf("%lli\n", fatorial);
+		}
+	}
+}
