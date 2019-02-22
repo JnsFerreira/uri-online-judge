@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <math.h>
+ 
+int main() {
+ 
+int casos,cont,valor,i,contResult;
+int result[10000];
+	
+	
+	scanf("%d",&casos);
+	
+	for(cont=0;cont<casos;cont++)
+	{
+        result[cont]=1;
+		scanf("%d",&valor);
+		if(valor==1) result[cont]=0;
+        if(valor>=4)
+        {
+            for(i=2;i<=sqrt(valor);i++)
+            {
+                if(valor%i==0)
+                {
+                    result[cont]=0;
+                    break;
+                }
+            }
+        }
+	}
+	
+	for(contResult=0;contResult<casos;contResult++)
+	{
+		if(result[contResult]==1)
+			{
+				printf("Prime\n");
+			}
+			
+			else
+				{	
+					printf("Not Prime\n");
+				}
+	}
+}
