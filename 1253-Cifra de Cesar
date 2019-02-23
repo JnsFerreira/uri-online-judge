@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<locale.h>
+#include<string.h>
+#define STRSIZE 100
+
+int main()
+{	setlocale(LC_ALL, "Portuguese");
+	char frase[STRSIZE], alterado;
+	int i, senha,casos, cont, totalFrase;
+    
+    scanf("%d",&casos); //Coleta a quantidade de casos
+    for(cont=0;cont<casos;cont++) //Cria um laço para coletar todas as repetições
+    {
+        scanf("%s", &frase);
+        scanf("%d", &senha);
+        totalFrase= strlen(frase);
+        
+        for(i=0; i<totalFrase; i++)
+        {	
+            alterado = frase[i]-senha;
+            if(alterado<'A') alterado = alterado + 26;
+            printf("%c", alterado);
+        }
+        printf("\n");
+    }
+
+	return 0;
+}
