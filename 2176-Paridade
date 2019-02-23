@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main()
+{
+	int cont, contaUm;
+	char valor[10000], zero[10]="0", um[10]="1";
+	
+	//Coleta os valores 
+	scanf("%s", valor);
+	
+	for(cont=0;valor[cont]!='\0';cont++)
+	{
+		if(valor[cont]=='1')
+		{
+			contaUm++;
+		}
+	}
+	
+	if(contaUm==0)
+	{
+		strcat(valor,zero);
+		printf("%s\n", valor);
+	}
+	
+	else if(contaUm%2==0) //Caso a soma seja par, o numero de bits 1 é par. Será acrescentado ao final um bit=0
+	{
+		strcat(valor,zero);
+		printf("%s\n", valor);
+	}
+		else// Caso contrario,o numero de bits=1 é impar. Será acrescentado ao final um bit=1
+		{
+			strcat(valor,um);
+			printf("%s\n", valor);
+		}
+	
+}
